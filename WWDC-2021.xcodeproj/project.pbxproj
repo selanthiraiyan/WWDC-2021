@@ -13,6 +13,7 @@
 		BA35BDC226762D3A004BAEB9 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BA35BDC126762D3A004BAEB9 /* Preview Assets.xcassets */; };
 		BA35BDCC26762D3A004BAEB9 /* WWDC_2021Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA35BDCB26762D3A004BAEB9 /* WWDC_2021Tests.swift */; };
 		BA35BDD626762D3A004BAEB9 /* WWDC_2021UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA35BDD526762D3A004BAEB9 /* WWDC_2021UITests.swift */; };
+		BA35BDE326762FB0004BAEB9 /* ContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA35BDE226762FB0004BAEB9 /* ContentViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +43,7 @@
 		BA35BDCB26762D3A004BAEB9 /* WWDC_2021Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WWDC_2021Tests.swift; sourceTree = "<group>"; };
 		BA35BDD126762D3A004BAEB9 /* WWDC-2021UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "WWDC-2021UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA35BDD526762D3A004BAEB9 /* WWDC_2021UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WWDC_2021UITests.swift; sourceTree = "<group>"; };
+		BA35BDE226762FB0004BAEB9 /* ContentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +98,7 @@
 				BA35BDBC26762D37004BAEB9 /* ContentView.swift */,
 				BA35BDBE26762D3A004BAEB9 /* Assets.xcassets */,
 				BA35BDC026762D3A004BAEB9 /* Preview Content */,
+				BA35BDE226762FB0004BAEB9 /* ContentViewModel.swift */,
 			);
 			path = "WWDC-2021";
 			sourceTree = "<group>";
@@ -256,6 +259,7 @@
 			files = (
 				BA35BDBD26762D37004BAEB9 /* ContentView.swift in Sources */,
 				BA35BDBB26762D37004BAEB9 /* WWDC_2021App.swift in Sources */,
+				BA35BDE326762FB0004BAEB9 /* ContentViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -422,7 +426,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -451,7 +455,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
