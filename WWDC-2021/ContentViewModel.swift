@@ -11,25 +11,35 @@ import Combine
 
 final class ContentViewModel: ObservableObject {
     @Published private(set) var title: String = "Test"
-    func downloadText() async -> String {
-        debugPrint("Downloading text...")
-        do {
-            let (_, response) = try await URLSession.shared.data(from: URL(string: "https://www.google.com/")!, delegate: nil)
-            guard let response = response as? HTTPURLResponse else {
-                return "No response"
-            }
-            return "\(response.statusCode)"
-        } catch {
-            return "Error occured"
+    
+    func download(from url: URL) async throws -> String {
+        let (_, response) = try await URLSession.shared.data(from: url, delegate: nil)
+        guard let response = response as? HTTPURLResponse else {
+            return "No response"
         }
+        return "\(response.statusCode)"
+    }
+    
+    func downloadText() async throws -> String {
+        debugPrint("Downloading text...")
+        let fromGoogle = try await download(from: URL(string: "https://www.google.com/")!)
+        let fromFB = try await download(from: URL(string: "https://www.facebook.com/")!)
+        let fromTwitter = try await download(from: URL(string: "https://www.twitter.com/")!)
+        return fromGoogle + " " + fromFB + " " + fromTwitter
     }
     
     func onAppear() {
         debugPrint("onAppear")
         async {
-            let text = await downloadText()
-            DispatchQueue.main.sync {
-                title = text
+            do {
+                let text = try await downloadText()
+                DispatchQueue.main.sync {
+                    title = text
+                }
+            } catch {
+                DispatchQueue.main.sync {
+                    title = "Error occured"
+                }
             }
         }
     }
